@@ -1,4 +1,4 @@
-**==警告：以下内容由代码库作者向 AI 询问并获取，使用时请万分小心，如有不一致请提出反馈。==**
+**==警告：以下内容由代码库作者向 AI 询问并获取，使用时请万分小心，不要在不确定使用方法时用于工程代码，如有不一致请提出反馈。==**
 
 # 使用规范与限制
 
@@ -97,8 +97,7 @@ try_end;                 // 每个 try/catch 块必须以此收尾
 ## 三、规范用法示例
 
 ```c
-#include <stdlib.h>
-#include ".h/exceptions.h"
+#include "exceptions.h"
 #include <stdio.h>
 
 void function1() {
