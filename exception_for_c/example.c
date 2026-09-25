@@ -1,6 +1,7 @@
 #include<stdlib.h>
-#include".exceptions.h"
+#include"exceptions.h"
 #include<stdio.h>
+// 本文件演示了基础的使用
 void function1(){
     throw(ValueError);
 }
