@@ -10,7 +10,7 @@ jmp_buf __try_point__[128]={};
 uint8_t __curr__=0;
 bool __at_exception__=false,__exception_cl__=false;
 #define try if(!setjmp(__try_point__[__curr__++]))
-#define catch(exception) else if(__at_exception__&&(errno==EINVAL|errno==exception))
+#define catch(exception) else if(__at_exception__&&(exception==EINVAL||errno==exception))
 #define exception_clear {__at_exception__ = false;__exception_cl__ = true;++__curr__;}
 #define throw(exception) do{__at_exception__ = true;errno=exception;if(__exception_cl__)__curr__--;__exception_cl__=false;longjmp(__try_point__[--__curr__],1);}while(false)
 #define finally if(true)
